@@ -1,4 +1,34 @@
-const entries = [
+type Entry = {
+  role: string;
+  org: string;
+  period: string;
+  points: string[];
+  tech?: string[];
+};
+
+const entries: Entry[] = [
+  {
+    role: "Robotics Research Assistant",
+    org: "California State University, Long Beach",
+    period: "Aug 2026 – Present",
+    points: [
+      "Designed the hardware architecture and sensor payload for a 1.3m bipedal humanoid robot, mapping Ouster LiDAR and OAK-D spatial AI cameras to decouple autonomous navigation from mobile telepresence compute.",
+      "Engineered a variable impedance control data pipeline leveraging 1000Hz IMUs and 6-DoF wrist force/torque sensors to detect and dynamically brace against erratic 400+ Newton leash-pulling forces.",
+      "Integrated hardware-encoded 4K video and DSP noise-canceling microphone arrays to stream low-latency, real-time telepresence data over 5G/Wi-Fi to a user-facing mobile app.",
+      "Defined whole-body kinematic constraints utilizing Ground Reaction Force (GRF) load cells and GelSight tactile sensors to maintain dynamic stability across changing friction surfaces and execute delicate bi-manual manipulation tasks.",
+    ],
+    tech: [
+      "Ouster LiDAR",
+      "OAK-D Spatial AI",
+      "1000Hz IMUs",
+      "6-DoF Force/Torque",
+      "GRF Load Cells",
+      "GelSight Tactile",
+      "DSP Mic Arrays",
+      "4K Video",
+      "5G/Wi-Fi",
+    ],
+  },
   {
     role: "Data Engineering Intern",
     org: "Springer Capital",
@@ -78,6 +108,18 @@ export default function Experience() {
                     </li>
                   ))}
                 </ul>
+                {entry.tech && entry.tech.length > 0 && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {entry.tech.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-star/70"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </li>
             ))}
           </ol>
