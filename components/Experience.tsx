@@ -38,6 +38,7 @@ const entries: Entry[] = [
       "Translated stakeholder data requirements into reliable datasets and documented data flows for repeatable downstream use.",
       "Monitored pipelines, troubleshooted failures, and improved storage/retrieval efficiency using SQL, Apache Spark, and Apache Airflow.",
     ],
+    tech: ["SQL", "Apache Spark", "Apache Airflow", "ETL Workflows", "Data Pipelines", "Data Validation"],
   },
   {
     role: "AI Studio Fellow",
@@ -49,6 +50,7 @@ const entries: Entry[] = [
       "Implemented a human-in-the-loop and LLM-as-a-judge workflow to reduce hallucinations and improve fidelity to source material.",
       "Generated knowledge-graph-style representations to support navigation and decision workflows, documenting usage and limitations.",
     ],
+    tech: ["Streamlit", "Python", "LLM-as-a-Judge", "Human-in-the-Loop", "Knowledge Graphs", "Structured JSON"],
   },
   {
     role: "Research Assistant",
@@ -59,6 +61,7 @@ const entries: Entry[] = [
       "Optimized feature selection to reduce compute time by 35% while maintaining 92% accuracy, evaluating sensitivity and error tradeoffs.",
       "Processed and analyzed gait and postural stability signals using scikit-learn, SciPy, and pandas for feature extraction and analysis.",
     ],
+    tech: ["scikit-learn", "SciPy", "pandas", "Predictive ML", "Feature Selection", "Sensor Data"],
   },
 ];
 
